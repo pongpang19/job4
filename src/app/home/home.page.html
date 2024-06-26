@@ -10,20 +10,20 @@
   <div class="ion-text-center"><img src="../../assets/02.png.png" style="width: 250px;"></div>
 <ion-card color="dark" class="ion-padding">
 <ion-item>
-  <ion-input label="กรอกน้ำหนัก:" placeholder="kg"></ion-input>
+  <ion-input label="กรอกน้ำหนัก:" placeholder="kg"[(ngModel)]="weight"></ion-input>
   </ion-item>
   <br>
   <ion-item>
-    <ion-input label="กรอกส่วนสูง:" placeholder="cm"></ion-input>
+    <ion-input label="กรอกส่วนสูง:" placeholder="cm"[(ngModel)]="hight"></ion-input>
     </ion-item>
     <br>
-    <ion-button sixe="large" expand="block" shape="round">คำนวณ</ion-button>
+    <ion-button sixe="large" expand="block" shape="round"(click)="oncal()">คำนวณ</ion-button>
     </ion-card>
 
     <ion-card color="warning">
       <ion-card-header>
         <ion-card-subtitle>ผลลัพธุ์</ion-card-subtitle>
-        <ion-card-title>18.5</ion-card-title>
+        <ion-card-title>{{result | number : '1.0-2'}}</ion-card-title>
       </ion-card-header>
     </ion-card>
     <ion-card color="danger">
